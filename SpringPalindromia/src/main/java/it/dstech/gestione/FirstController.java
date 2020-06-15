@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import it.dstech.modelli.Testo;
+
 @Controller
 public class FirstController {
 
@@ -14,14 +16,13 @@ public class FirstController {
 		
 		
 		Metodi gestione = new Metodi();
+		Testo testoAnalizzato = new Testo( gestione.contaParole(testo), gestione.contaPalindromia(testo) , gestione.parolePalindrome);
 		
-		int numeroParole = gestione.contaParole(testo);
-		int numeroParolePalindrome = gestione.contaPalindromia(testo);
 		
-		return new ModelAndView("Homepage" , "Il numero delle parole del testo è : " +numeroParole 
-				+ "\n Il numero delle parole palindrome è: " + numeroParolePalindrome, testo);
 		
+		return new ModelAndView("Homepage", "Risultato" ,testoAnalizzato);
 	}
+	
 }
 
 

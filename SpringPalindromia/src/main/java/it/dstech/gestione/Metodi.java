@@ -1,7 +1,11 @@
 package it.dstech.gestione;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Metodi {
 	 
+	List<String> parolePalindrome = new ArrayList<String>();
 	
 	public int contaPalindromia(String testo) {
 		int numeroParolePalindrome=0;
@@ -9,6 +13,7 @@ public class Metodi {
 		
 		for (int i = 0; i < array.length; i++) {
 			if(palindromia(array[i])) {
+				parolePalindrome.add(array[i]);
 				numeroParolePalindrome++;
 			}
 		}
