@@ -19,9 +19,7 @@ public class Service {
 		}
 	
 		Risultato risultato = new Risultato(numeroVocali, numeroConsonanti, contaParole(testo));
-		
 		return risultato;
-		
 	}
 	
 	

@@ -3,6 +3,7 @@ package it.dstech.gestione;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -10,9 +11,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class FirstController {
 	
-	@RequestMapping(value  = "/homepage")
+	@RequestMapping(value  = "/homepage" , method= RequestMethod.POST)
 	public ModelAndView checkParameter(@RequestParam("testo") String testo, Model model, @RequestParam("scelta") String scelta) {
-		ModelAndView view = new ModelAndView("risultato");
+		ModelAndView view = new ModelAndView("Risultato");
 		Service gestione = new Service();
 		if(scelta.equalsIgnoreCase("parole")) {
 			view.addObject("risultato", gestione.conteggio(testo).getNumeroParole());
@@ -23,5 +24,4 @@ public class FirstController {
 		} 
 		return view;
 	}
-	
 }

@@ -5,9 +5,9 @@
 	id="WebApp_ID" version="4.0">
 	<display-name>conteggioParole</display-name>
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>Homepage.html</welcome-file>
+		<welcome-file>Homepage.htm</welcome-file>
+		<welcome-file>Homepage.jsp</welcome-file>
 	</welcome-file-list>
 
 	<servlet>

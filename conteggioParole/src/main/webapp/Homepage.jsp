@@ -18,23 +18,24 @@
                 <div class="signin-content">
 
                     <div class="signin-form">
-                        <h2 class="form-title">Analizza un testo da te inserito con diverse opzioni</h2>
+                        <h2 class="form-title">Inserisci un testo da analizzare</h2>
                         <br>
                         
-                        <form action="conteggioParole" method="POST" >
+                        <form action="homepage" method="POST" >
                             <div class="form-group">
                                 <label for="your_text"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="testo" required="required" id="testo" placeholder="Inserisci il testo da analizzare "/>
                             </div>
                      
                             <div class="form-group form-button">
+                            <form action="homepage" method="POST" >
                             	<input type="radio" id="parole" name="scelta" value="parole">
 								<label for="parole">Conteggio Parole</label><br>
 								<input type="radio" id="vocali" name="scelta" value="vocali">
-								<label for="female">Conteggio Vocali</label><br>
+								<label for="vocali">Conteggio Vocali</label><br>
 								<input type="radio" id="consonanti" name="scelta" value="consonanti">
-								<label for="other">Conteggio Consonanti</label>
-								<input type="submit" name="esegui" required="required" placeholder="Esegui"/>
+								<label for="consonanti">Conteggio Consonanti</label><br>
+								<input type="submit" name="Esegui" required="required" value="Esegui"/>
                             </div>
                         </form>
                     </div>
