@@ -14,8 +14,8 @@ import repository.YourRepository;
 public class PrimaryService {
 	@Autowired YourRepository repo;
 	
-	public void save(Product customer) {
-		repo.save(customer);
+	public void save(Product product) {
+		repo.save(product);
 	}
 	
 	public List<Product> listAll() {

@@ -1,43 +1,46 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
-	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+
+    <link rel="stylesheet" href="static/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Magazine Manager</title>
+<meta charset="ISO-8859-1">
+<title>Homepage</title>
 </head>
+
 <body>
-<div align="center">
-	<h2>Magazine Manager</h2>
-	<form method="get" action="search">
-		<input type="text" name="keyword" /> &nbsp;
-		<input type="submit" value="Search" />
-	</form>
-	<h3><a href="new">New Customer</a></h3>
-	<table border="1" cellpadding="5">
-		<tr>
-			<th>ID</th>
-			<th>Name</th>
-			<th>E-mail</th>
-			<th>Address</th>
-			<th>Action</th>
-		</tr>
-		<c:forEach items="${listCustomer}" var="customer">
-		<tr>
-			<td>${customer.id}</td>
-			<td>${customer.name}</td>
-			<td>${customer.email}</td>
-			<td>${customer.address}</td>
-			<td>
-				<a href="edit?id=${customer.id}">Edit</a>
-				&nbsp;&nbsp;&nbsp;
-				<a href="delete?id=${customer.id}">Delete</a>
-			</td>
-		</tr>
-		</c:forEach>
-	</table>
-</div>	
+	<div class="main">
+  <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+
+                    <div class="signin-form">
+                        <h2 class="form-title">Select your operation</h2>
+                        <br>
+                        
+
+                     
+                            <div class="form-group form-button">
+                            <form action="homepage" method="POST" >
+                            	<input type="radio" id="parole" name="choice" value="check">
+								<label for="products">Check the products in store by field</label><br>
+								<input type="radio" id="vocali" name="choice" value="add">
+								<label for="add">Add product</label><br>
+								<input type="radio" id="consonanti" name="choice" value="remove">
+								<label for="remove">Remove product</label><br>
+								<input type="radio" id="consonanti" name="choice" value="edit">
+								<label for="edit">Edit product</label><br>
+								<input type="submit" name="Execute" required="required" value="Execute"/>
+								</form>
+                            </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
 </body>
 </html>

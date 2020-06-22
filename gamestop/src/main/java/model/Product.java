@@ -2,12 +2,11 @@ package model;
 
 public class Product {
 	
-	private String titolo;
-	private String classificazione;
+	private long id;
+	private String title;
 	private int PEGI;
-	private int prezzo;
-	private String categoria;
-	
+	private int price;
+	private String category;
 	
 	
 	
@@ -16,55 +15,44 @@ public class Product {
 		super();
 	}
 
-
-	public Product(String titolo, String classificazione, int pEGI, int prezzo, String categoria) {
+	public Product(long id, String title, int pEGI, int price, String category) {
 		super();
-		this.titolo = titolo;
-		this.classificazione = classificazione;
+		this.id = id;
+		this.title = title;
 		PEGI = pEGI;
-		this.prezzo = prezzo;
-		this.categoria = categoria;
+		this.price = price;
+		this.category = category;
 	}
 	
-	
-	public String getTitolo() {
-		return titolo;
+	public long getId() {
+		return id;
 	}
-	
-	public void setTitolo(String titolo) {
-		this.titolo = titolo;
+	public void setId(long id) {
+		this.id = id;
 	}
-	
-	public String getClassificazione() {
-		return classificazione;
+	public String getTitle() {
+		return title;
 	}
-	
-	public void setClassificazione(String classificazione) {
-		this.classificazione = classificazione;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-	
 	public int getPEGI() {
 		return PEGI;
 	}
-	
 	public void setPEGI(int pEGI) {
 		PEGI = pEGI;
 	}
-	
-	public int getPrezzo() {
-		return prezzo;
+	public int getPrice() {
+		return price;
 	}
-	
-	public void setPrezzo(int prezzo) {
-		this.prezzo = prezzo;
+	public void setPrice(int price) {
+		this.price = price;
 	}
-	
-	public String getCategoria() {
-		return categoria;
+	public String getCategory() {
+		return category;
 	}
-	
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
+	public void setCategory(String category) {
+		this.category = category;
 	}
 	
 }
